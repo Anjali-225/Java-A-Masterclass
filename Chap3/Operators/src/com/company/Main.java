@@ -83,10 +83,14 @@ public class Main {
         //Video 37
         int newValue = 50; // Assignment operator
         if (newValue == 50) { //Equals To Operator
-            System.out.println("This is an error");
+            System.out.println("This is true");
         }
 
-
-
+        boolean isCar = false;
+        if (isCar) { //wont show anything
+            if (isCar) { //wont show anything
+                System.out.println("This is not supposed to happen");
+            }
+        }
     }
 }
