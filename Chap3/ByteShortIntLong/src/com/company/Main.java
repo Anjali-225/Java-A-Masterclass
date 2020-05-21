@@ -46,6 +46,6 @@ public class Main {
         byte myByteTotal = (byte)(myMinByteValue /2);
 
         short myShortTotal = (short) (myMinShortValue /2);
-        
+
     }
 }
