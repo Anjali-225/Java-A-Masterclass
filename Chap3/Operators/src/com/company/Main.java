@@ -99,6 +99,26 @@ public class Main {
             System.out.println("wasCar is True");
         }
 
+        System.out.println("");
+
+        //Video 39 - challenge
+        //Order Matters -- BODMAS
+        double myDoubleValue1 = 20d;
+        double myDoubleValue2 = 80d;
+        double myDoubleTotal = (myDoubleValue1 + myDoubleValue2) * 100;
+        System.out.println("My values total = " + myDoubleTotal);
+        double theRemainder = myDoubleTotal % 40.00d;
+        System.out.println("The Remainder = " + theRemainder);
+        boolean isNoRemainder = (theRemainder == 0) ? true : false;
+        System.out.println("isNoRemainder = " + isNoRemainder);
+        if (isNoRemainder){
+            System.out.println("There is no remainder");
+        }
+        if (!isNoRemainder) {
+            System.out.println("Got some remainder");
+        }
+
+
 
 
     }
