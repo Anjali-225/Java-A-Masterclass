@@ -88,9 +88,18 @@ public class Main {
 
         boolean isCar = false;
         if (isCar) { //wont show anything
-            if (isCar) { //wont show anything
-                System.out.println("This is not supposed to happen");
-            }
+            System.out.println("This is not supposed to happen");
         }
+
+        //Video 38
+        //Ternary Operator
+        isCar = true;
+        boolean wasCar = isCar ? true : false;
+        if (wasCar) {
+            System.out.println("wasCar is True");
+        }
+
+
+
     }
 }
