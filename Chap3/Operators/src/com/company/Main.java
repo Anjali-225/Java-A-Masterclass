@@ -114,12 +114,9 @@ public class Main {
         if (isNoRemainder){
             System.out.println("There is no remainder");
         }
-        if (!isNoRemainder) {
-            System.out.println("Got some remainder");
-        }
-
-
-
-
+        
+//        if (!isNoRemainder) {
+//            System.out.println("Got some remainder");
+//        }
     }
 }
