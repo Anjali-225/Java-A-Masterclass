@@ -22,7 +22,6 @@ public class TodoData {
     private ObservableList<TodoItem> todoItems;
     private DateTimeFormatter formatter;
 
-
     public static TodoData getInstance() {
         return instance;
     }
@@ -90,6 +89,10 @@ public class TodoData {
                 bw.close();
             }
         }
+    }
+
+    public void deleteTodoItem(TodoItem item) {
+        todoItems.remove(item);
     }
 
 
