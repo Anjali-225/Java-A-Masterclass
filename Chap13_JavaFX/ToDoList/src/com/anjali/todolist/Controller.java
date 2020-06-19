@@ -267,8 +267,4 @@ public class Controller {
     public void handleExit() {
         Platform.exit();
     }
-
-
-
-
 }
