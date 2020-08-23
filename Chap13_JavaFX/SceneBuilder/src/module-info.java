@@ -1,10 +1,9 @@
 module SceneBuilder {
 
-    requires javafx.fxml;
-    requires javafx.controls;
     requires javafx.web;
-    requires javafx.base;
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires java.base;
 
     opens sample;
-
 }
