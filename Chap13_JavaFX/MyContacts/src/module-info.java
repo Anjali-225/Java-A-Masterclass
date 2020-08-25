@@ -1,8 +1,8 @@
-module MyContactsFX {
+module MyContacts {
+
+    requires java.xml;
     requires javafx.fxml;
     requires javafx.controls;
-    requires java.xml;
 
     opens sample;
-    opens sample.datamodel;
 }
