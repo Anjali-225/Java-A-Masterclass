@@ -4,11 +4,11 @@
 	<first_name>Bugs</first_name>
 	<last_name>Bunny</last_name>
 	<phone_number>1234</phone_number>
-	<notes>New entry</notes>
+	<notes>Some notes</notes>
 </contact>
 <contact>
 	<first_name>Tom</first_name>
-	<last_name>Jerry</last_name>
+	<last_name>Wonder</last_name>
 	<phone_number>123456</phone_number>
 	<notes>My Notes</notes>
 </contact>
