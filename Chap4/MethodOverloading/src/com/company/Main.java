@@ -8,12 +8,10 @@ public class Main {
         calculateScore(75);
         calculateScore();
 
-        double centimeters1 = calcFeetInchesToCentimeters(6, 0) {
+        double centimeters1 = calcFeetInchesToCentimeters(6, 0);
             if(centimeters1 < 0.0){
                 System.out.println("Invalid parameters");
             }
-
-        }
 
         calcFeetInchesToCentimeters(7, 5);
 
