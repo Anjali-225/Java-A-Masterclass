@@ -9,6 +9,15 @@ public class Main {
         hamburger.addHamburgerAddition1("Tomato", 0.27);
         hamburger.addHamburgerAddition2("Lettuce", 0.75);
         hamburger.addHamburgerAddition3("Cheese", 1.12);
-        System.out.println("Total burger Price is " + hamburger.itemizeHamburger());
+        System.out.println("Total Burger Price is " + hamburger.itemizeHamburger() + "\n");
+
+        HealthyBurger healthyBurger = new HealthyBurger("Chicken", 5.67);
+        healthyBurger.addHealthAddition1("Egg", 5.43);
+        healthyBurger.addHealthAddition2("Lentils", 3.41);
+        System.out.println("Total Healthy Burger Price is " + healthyBurger.itemizeHamburger()+ "\n");
+
+        DeluxeBurger deluxeBurger = new DeluxeBurger();
+        deluxeBurger.addHamburgerAddition1("New Items", 50);
+        deluxeBurger.itemizeHamburger();
     }
 }
