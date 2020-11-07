@@ -8,5 +8,10 @@ public class Main {
 	    anjisPhone.powerOn();
 	    anjisPhone.callPhone(123456);
 	    anjisPhone.answer();
+
+	    anjisPhone = new MobilePhone(24565);
+	    anjisPhone.powerOn();
+	    anjisPhone.callPhone(24565);
+	    anjisPhone.answer();
     }
 }
