@@ -32,8 +32,13 @@ public class Main {
         System.out.println(anji);
         anji.setWeapon("Knife");
         saveObjects(anji);
-        loadObject(anji);
+//        loadObject(anji);
         System.out.println(anji);
+
+        ISavable werewolf = new Monster("Werewolf", 20, 40);
+        System.out.println("Strength = " + ((Monster) werewolf).getStrength());
+        System.out.println(werewolf);
+        saveObjects(werewolf);
     }
 
     public static ArrayList<String> readValues() {
