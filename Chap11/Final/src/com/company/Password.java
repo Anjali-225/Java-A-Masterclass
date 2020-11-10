@@ -1,4 +1,4 @@
-package com.company._static;
+package com.company;
 
 public class Password {
     private static final int key = 123456789;
@@ -12,7 +12,7 @@ public class Password {
         return password ^ key;
     }
 
-    public void storePassword() {
+    public final void storePassword() {
         System.out.println("Saving Password as " + this.encyptedPassword);
     }
 

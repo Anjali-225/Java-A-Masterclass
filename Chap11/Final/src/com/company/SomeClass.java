@@ -1,4 +1,4 @@
-package com.company._static;
+package com.company;
 
 public class SomeClass {
 
