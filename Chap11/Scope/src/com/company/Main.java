@@ -3,15 +3,19 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	    String privateVar = "this is private to main()";
+	    String varFour = "this is private to main()";
 
 	    ScopeCheck scopeInstance = new ScopeCheck();
-        System.out.println("scopeInstance privateVar is " + scopeInstance.getPrivateVar());
-        System.out.println(privateVar);
+	    scopeInstance.useInner();
 
-        scopeInstance.timesTwo();
-        System.out.println("********************************************");
-        ScopeCheck.InnerClass innerClass = scopeInstance.new InnerClass();
-        innerClass.timesTwo();
+	    ScopeCheck.InnerClass innerClass = scopeInstance.new InnerClass();
+//        System.out.println("var3 is not accessible here " + innerClass.var3); // won't work because var3 is private
+//        System.out.println("scopeInstance var1 is " + scopeInstance.getVar1());
+//        System.out.println(varFour);
+//
+//        scopeInstance.timesTwo();
+//        System.out.println("********************************************");
+//        ScopeCheck.InnerClass innerClass = scopeInstance.new InnerClass();
+//        innerClass.timesTwo();
     }
 }
