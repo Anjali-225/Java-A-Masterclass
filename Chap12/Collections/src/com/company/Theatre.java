@@ -6,7 +6,7 @@ import java.util.*;
 public class Theatre {
     private final String theatreName;
 //    private Collection<Seat> seats = new LinkedList<>();
-    private List<Seat> seats = new ArrayList<>();
+    public List<Seat> seats = new ArrayList<>();
 //    private Collection<Seat> seats = new HashSet<>();
 //    private Collection<Seat> seats = new TreeSet<>(); // Will give an array
 //    private Collection<Seat> seats = new LinkedHashSet<>();
@@ -33,7 +33,7 @@ public class Theatre {
         int high = seats.size()-1;
 
         while (low <= high) {
-            System.out.println(".");
+            System.out.print(".");
             int mid = (low + high) / 2;
             Seat midVal = seats.get(mid);
             int cmp = midVal.getSeatNumber().compareTo(seatNumber);
@@ -80,7 +80,7 @@ public class Theatre {
         }
     }
 
-    private class Seat implements Comparable<Seat> {
+    public class Seat implements Comparable<Seat> {
         private final String seatNumber;
         private boolean reserved = false;
 
