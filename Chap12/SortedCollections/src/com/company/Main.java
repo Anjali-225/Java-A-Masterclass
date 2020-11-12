@@ -56,29 +56,69 @@ public class Main {
         if (sellItem(myBasket, "car", 1) != 1) {
             System.out.println("There are no more cars in stock");
         }
-        System.out.println(myBasket);
+//        System.out.println(myBasket);
 
         sellItem(myBasket, "spanner", 5);
-        System.out.println(myBasket);
+//        System.out.println(myBasket);
 
         sellItem(myBasket, "juice", 4);
         sellItem(myBasket, "cup", 12);
         sellItem(myBasket, "bread", 1);
+//        System.out.println(myBasket);
+
+//        System.out.println(stockList);
+
+        Basket basket = new Basket("Customer");
+        sellItem(basket,"cup", 100);
+        sellItem(basket, "juice", 5);
+        removeItem(basket, "cup", 1);
+        System.out.println(basket);
+
+        removeItem(myBasket, "car", 1);
+        removeItem(myBasket, "cup", 9);
+        removeItem(myBasket, "car", 1);
+        System.out.println("cars removed: " + removeItem(myBasket, "car", 1)); // should not remove any
+
         System.out.println(myBasket);
 
+        // remove all items from myBasket
+        removeItem(myBasket, "bread", 1);
+        removeItem(myBasket, "cup", 3);
+        removeItem(myBasket, "juice", 4);
+        removeItem(myBasket, "cup", 3);
+
+        System.out.println("\nDisplay stock list before and after checkout");
+        System.out.println(basket);
         System.out.println(stockList);
+        checkOut(basket);
+        System.out.println(basket);
+        System.out.println(stockList);
+
 
         // This will give us an unsupported operation, because its an unmodifiable map
 //        temp = new StockItem("pen", 1.12);
 //        stockList.Items().put(temp.getName(), temp);
 
-        stockList.Items().get("car").adjustStock(100);
-        stockList.get("car").adjustStock(-10);
+        // If we have no inventory
+        StockItem car = stockList.Items().get("car");
+        if (car != null) {
+            car.adjustStock(2000);
+        }
+
+        if (car != null) {
+            stockList.get("car").adjustStock(-10);
+        }
+
+//        stockList.Items().get("car").adjustStock(200);
+//        stockList.get("car").adjustStock(-10);
         System.out.println(stockList);
 
-        for (Map.Entry<String, Double> price : stockList.PriceList().entrySet()) {
-            System.out.println(price.getKey() + " costs " + price.getValue());
-        }
+//        for (Map.Entry<String, Double> price : stockList.PriceList().entrySet()) {
+//            System.out.println(price.getKey() + " costs " + price.getValue());
+//        }
+
+        checkOut(myBasket);
+        System.out.println(myBasket);
 
     }
 
