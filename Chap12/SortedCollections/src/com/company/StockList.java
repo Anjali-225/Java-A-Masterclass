@@ -40,6 +40,14 @@ public class StockList {
         return list.get(key);
     }
 
+    public Map<String, Double> PriceList() {
+        Map<String, Double> prices = new LinkedHashMap<>();
+        for (Map.Entry<String, StockItem> item : list.entrySet()) {
+            prices.put(item.getKey(), item.getValue().getPrice());
+        }
+        return Collections.unmodifiableMap(prices);
+    }
+
     public Map<String, StockItem> Items() {
         return Collections.unmodifiableMap(list);
     }
@@ -57,6 +65,6 @@ public class StockList {
             s = s + String.format("%.2f",itemValue) + "\n";
             totalCost += itemValue;
         }
-        return s + " Total stock value " + totalCost;
+        return s + "Total stock value " + totalCost;
     }
 }
