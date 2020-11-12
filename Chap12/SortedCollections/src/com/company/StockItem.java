@@ -43,7 +43,7 @@ public class StockItem  implements Comparable<StockItem> {
         }
     }
 
-    public int reservedStock(int quantity) {
+    public int reserveStock(int quantity) {
         if (quantity <= availableQuantity()) { // Use the method and not the field
             reserved += quantity;
             return quantity;
@@ -51,7 +51,7 @@ public class StockItem  implements Comparable<StockItem> {
         return 0;
     }
 
-    public int unreservedStock(int quantity) {
+    public int unreserveStock(int quantity) {
         if (quantity <= reserved) {
             reserved -= quantity;
             return quantity;
